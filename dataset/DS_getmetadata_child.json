@@ -1,0 +1,49 @@
+{
+	"name": "DS_getmetadata_child",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folders": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().folders",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Player_id",
+				"type": "String"
+			},
+			{
+				"name": "Player_name",
+				"type": "String"
+			},
+			{
+				"name": "Player_Highest_score",
+				"type": "String"
+			},
+			{
+				"name": "Number_of_matches",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

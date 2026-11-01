@@ -1,0 +1,15 @@
+{
+	"name": "nesteddatafctry",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "77156491-77ce-4453-bc8d-d43b0cee8553",
+		"tenantId": "11b3f47a-7092-447e-918e-b3d63f1d6a8e"
+	}
+}
